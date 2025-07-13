@@ -10,7 +10,6 @@ const Login = lazy(() => import('./pages/Login'));
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Posts = lazy(() => import('./pages/Posts'));
 const Profile = lazy(() => import('./pages/Profile'));
-const Feed = lazy(() => import('./pages/Feed'));
 
 function AppRoutes() {
   const { isAuthenticated, isLoading } = useAuthStore();
@@ -44,18 +43,6 @@ function AppRoutes() {
         }
       />
       <Route
-        path="/feed"
-        element={
-          <ProtectedRoute>
-            <Layout>
-              <Suspense fallback={<LoadingSpinner />}>
-                <Feed />
-              </Suspense>
-            </Layout>
-          </ProtectedRoute>
-        }
-      />
-      <Route
         path="/dashboard"
         element={
           <ProtectedRoute>
@@ -68,7 +55,7 @@ function AppRoutes() {
         }
       />
       <Route
-        path="/posts"
+        path="/feed"
         element={
           <ProtectedRoute>
             <Layout>

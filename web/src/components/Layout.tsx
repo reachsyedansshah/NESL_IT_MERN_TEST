@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: Home },
-    { name: 'Posts', href: '/posts', icon: FileText },
+    { name: 'Feed', href: '/feed', icon: FileText },
     { name: 'Profile', href: '/profile', icon: User },
   ]
 
