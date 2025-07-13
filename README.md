@@ -196,21 +196,6 @@ Executing aggregation for user: u2
 ✅ Found 10 posts from user's followings
 ```
 
-#### Test Commands
-```bash
-# Run aggregation with different users
-node -e "
-const { executeAggregation } = require('./aggregation.js');
-executeAggregation(db, 'u1');
-"
-
-# Check index statistics
-node -e "
-const { getIndexStats } = require('./indexes.js');
-getIndexStats(db);
-"
-```
-
 ---
 
 ## 🔧 Part 2: Node.js API & RBAC
@@ -255,7 +240,7 @@ The `authorize(roles: string[])` middleware:
 # Ensure MongoDB is running
 mongod
 
-# Set environment variables (optional)
+# Set environment variables (optional) or create .env file
 export JWT_SECRET="your-secret-key"
 export PORT=3030
 export MONGODB_URI="mongodb://localhost:27017/social_network"
@@ -265,6 +250,11 @@ export MONGODB_URI="mongodb://localhost:27017/social_network"
 ```bash
 # Navigate to api directory
 cd NESL_IT_MERN_TEST/api
+
+# Create .env file and paste these variables:
+JWT_SECRET="your-secret-key"
+PORT=3030
+MONGODB_URI="mongodb://localhost:27017/social_network"
 
 # Install dependencies
 npm install
@@ -277,34 +267,29 @@ npm run dev
 ```
 
 #### Test Credentials
-- **User Account**: `u1` (role: user) - can delete/update own posts only
-- **Admin Account**: `u2` (role: admin) - can delete/update any post
+- **User Account**: `u1` (role: user) - email: 'john.doe@example.com', password:'password'
+- **Admin Account**: `u2` (role: admin) - email: 'jane.doe@example.com', password:'password'
 
-#### API Test Commands
-```bash
-# Test authentication
-curl -X POST http://localhost:3030/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"username": "u1", "password": "password123"}'
-
-# Test posts endpoint
-curl -X GET http://localhost:3030/posts?page=1&limit=10
-
-# Test with authentication
-curl -X GET http://localhost:3030/posts \
-  -H "Authorization: Bearer YOUR_JWT_TOKEN"
-```
 
 #### Unit Tests
 ```bash
 # Run all tests
 npm test
 
-# Run specific test file
-npm test -- auth.test.js
+# Run tests for auth
+npm run test:auth
 
 # Run tests with coverage
 npm run test:coverage
+
+# Run tests for delete
+npm run test:delete
+
+# Run tests for posts
+npm run test:posts
+
+# Run tests for follows
+npm run test:follows
 ```
 
 #### Expected Test Results
