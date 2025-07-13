@@ -2,6 +2,13 @@
 node_modules/
 web/node_modules/
 api/node_modules/
+debug/node_modules/
+
+#package-lock.json
+package-lock.json
+web/package-lock.json
+api/package-lock.json
+debug/package-lock.json
 
 
 # Build output
