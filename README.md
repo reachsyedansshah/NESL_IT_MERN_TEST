@@ -164,7 +164,7 @@ export MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/social_n
 #### Installation & Setup
 ```bash
 # Navigate to db directory
-cd NESL_IT_MERN_TEST/db
+cd db
 
 # Install dependencies
 npm install
@@ -249,7 +249,7 @@ export MONGODB_URI="mongodb://localhost:27017/social_network"
 #### Installation & Setup
 ```bash
 # Navigate to api directory
-cd NESL_IT_MERN_TEST/api
+cd api
 
 # Create .env file and paste these variables:
 JWT_SECRET="your-secret-key"
@@ -328,7 +328,7 @@ npm run test:follows
 #### Installation & Setup
 ```bash
 # Navigate to web directory
-cd NESL_IT_MERN_TEST/web
+cd web
 
 # Install dependencies
 npm install
@@ -352,9 +352,6 @@ VITE_APP_TITLE=Social Network
 ```bash
 # Start development server
 npm run dev
-
-# Run tests
-npm test
 
 # Build for production
 npm run build
@@ -407,7 +404,7 @@ npm install mongodb
 #### Installation & Setup
 ```bash
 # Navigate to debug directory
-cd NESL_IT_MERN_TEST/debug
+cd debug
 
 # Install dependencies
 npm install
@@ -553,12 +550,6 @@ DEBUG=true
 ### API Tests
 ```bash
 cd api
-npm test
-```
-
-### Web Tests
-```bash
-cd web
 npm test
 ```
 
