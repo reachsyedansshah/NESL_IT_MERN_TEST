@@ -1,0 +1,30 @@
+{
+  "name": "mongodb-aggregation-demo",
+  "version": "1.0.0",
+  "description": "MongoDB Aggregation & Data Modeling for Social Network Analytics",
+  "main": "run-aggregation.js",
+  "scripts": {
+    "start": "node run-aggregation.js",
+    "demo": "node run-aggregation.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongodb",
+    "aggregation",
+    "social-network",
+    "analytics",
+    "database"
+  ],
+  "author": "Social Network API Team",
+  "license": "MIT",
+  "dependencies": {
+    "mongodb": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/mongodb-aggregation-demo"
+  }
+} 
