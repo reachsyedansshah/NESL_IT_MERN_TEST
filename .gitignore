@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+web/node_modules/
+api/node_modules/
+
+
+# Build output
+dist/
+build/
+web/dist/
+api/dist/
+
+# Logs
+*.log
+logs/
+web/logs/
+api/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+web/.env
+api/.env
+
+# Test coverage
+coverage/
+web/coverage/
+api/coverage/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Debug
+web/debug/
+api/debug/
